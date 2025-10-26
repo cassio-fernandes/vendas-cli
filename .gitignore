@@ -1,0 +1,4 @@
+.vscode/
+.pytest_cache/
+build
+src/*.egg_info
