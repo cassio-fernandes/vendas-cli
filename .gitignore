@@ -1,4 +1,13 @@
 .vscode/
 .pytest_cache/
 build
+
 src/*.egg_info
+src/parser/__pycache__
+src/output/__pycache__
+src/core/__pycache__
+src/core/commands/__pycache__
+tests/__pycache__
+tests/unit/__pycache__
+tests/fixtures/__pycache__
+.coverage

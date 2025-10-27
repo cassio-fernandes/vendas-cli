@@ -1,6 +1,7 @@
 from core.cli import CliCommandGroup
-from core.commands.sales import *
+import importlib
 
+importlib.import_module("core.commands.sales")
 
 if __name__ == "__main__":
     CliCommandGroup.run()

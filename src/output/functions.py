@@ -6,15 +6,6 @@ from tabulate import tabulate
 from parser.schema import Sales
 
 
-"""
-[
-    {'produto': 'Camiseta', 'quantidade': '3', 'preco_unitario': '49.9'}, 
-    {'produto': 'Calça', 'quantidade': '2', 'preco_unitario': '99.9'}, 
-    {'produto': 'Camiseta', 'quantidade': '1', 'preco_unitario': '49.9'}, 
-    {'produto': 'Tênis', 'quantidade': '1', 'preco_unitario': '199.9'}
-]
-"""
-
 def get_sale_details(data: List[Sales]) -> Dict:
     _total_product: Dict[str, float] = {}
     _total_sales: float = 0.0

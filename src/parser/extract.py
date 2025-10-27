@@ -45,8 +45,14 @@ class Parser:
         return _data
 
     def _parse_obj(data: Dict) -> Sales|None:
+        _valid_columns = ("produto", "quantidade", "preco_unitario")
+        sales = Sales()
+
+        if not all(col in data.keys() for col in _valid_columns):
+            logger.error(f"colunas obrigatórias não encontradas {data.keys()}")
+            return
+        
         try:
-            sales = Sales()
             sales.product = data.get("produto")
             sales.quantity=int(data.get("quantidade"))
             sales.price=float(data.get("preco_unitario"))
